@@ -1,8 +1,8 @@
 
 
 set.seed(1234)
-setwd("C://Users//MinSu//Desktop//»ı¹°Åë°è(Áß°£¹ßÇ¥)")
-#1. mushroom
+setwd("C://Users//MinSu//Desktop//ìƒë¬¼í†µê³„(ì¤‘ê°„ë°œí‘œ)")
+############################################################ 1. mushroom #####################################################################
 ##step1 setting
 df1=read.table("agaricus-lepiota.data",sep=",")
 head(df1)
@@ -39,7 +39,7 @@ g_constraint <- TSVM(X=X,y=y,X_u=X_u,
                      C=10,Cstar=10,balancing_constraint = TRUE,
                      x_center = FALSE,verbose=TRUE)
 ##step2 tuning(10CV)
-#X_u´Â °íÁ¤µÈÃ¤·Î, X¸¸ ¹Ù²ã°¡¸ç..
+#X_uëŠ” ê³ ì •ëœì±„ë¡œ, Xë§Œ ë°”ê¿”ê°€ë©°..
 
 tuningnum=sample(1:100,100)
 traindata_l_cv=traindata_l[tuningnum,]
@@ -112,7 +112,7 @@ for(j in 1:6){
   cc=lis[j]
   lis2[j]=flower1(cc)
 }
-lis2 #cost 0.1 Ã¤ÅÃ
+lis2 #cost 0.1 ì±„íƒ
 
 l=list(lis=lis,lis=lis)
 m=do.call(expand.grid,l)
@@ -124,7 +124,7 @@ for (i in 1:36) {
   }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
 }
 m
-#cost 0.1, 0.001 Ã¤ÅÃ
+#cost 0.1, 0.001 ì±„íƒ
 
 
 
@@ -138,9 +138,9 @@ g_constraint <- TSVM(X=X,y=y,X_u=X_u,
                      x_center = FALSE,verbose=TRUE)
 X_test=testdata[,2:22]
 mean(testdata$V1==predict(g_sup,X_test))
-mean(testdata$V1==predict(g_constraint,X_test)) #¼º´ÉÀÌ »ìÂ¦ ÁÁ¾ÆÁü..
+mean(testdata$V1==predict(g_constraint,X_test)) #ì„±ëŠ¥ì´ ì‚´ì§ ì¢‹ì•„ì§..
 
-#2.iris
+########################################################################### 2.iris ###########################################
 ##step1 setting
 set.seed(1234)
 df2=read.table("iris.data",sep=",")
@@ -178,7 +178,7 @@ g_constraint <- TSVM(X=X,y=y,X_u=X_u,
                      C=10,Cstar=10,balancing_constraint = TRUE,
                      x_center = FALSE,verbose=TRUE)
 ##step2 tuning(10CV)
-#X_u´Â °íÁ¤µÈÃ¤·Î, X¸¸ ¹Ù²ã°¡¸ç..
+#X_uëŠ” ê³ ì •ëœì±„ë¡œ, Xë§Œ ë°”ê¿”ê°€ë©°..
 
 tuningnum=sample(1:10,10)
 traindata_l_cv=traindata_l[tuningnum,]
@@ -251,7 +251,7 @@ for(j in 1:6){
   cc=lis[j]
   lis2[j]=flower1(cc)
 }
-lis2 #cost 0.1 Ã¤ÅÃ
+lis2 #cost 0.1 ì±„íƒ
 
 l=list(lis=lis,lis=lis)
 m=do.call(expand.grid,l)
@@ -263,7 +263,7 @@ for (i in 1:36) {
   }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
 }
 m
-#cost 0.1, 1 Ã¤ÅÃ
+#cost 0.1, 1 ì±„íƒ
 
 
 
@@ -276,10 +276,10 @@ g_constraint <- TSVM(X=X,y=y,X_u=X_u,
                      x_center = FALSE,verbose=TRUE)
 X_test=testdata[,1:4]
 mean(testdata$V5==predict(g_sup,X_test))
-mean(testdata$V5==predict(g_constraint,X_test)) #¼º´ÉÀÌ ´Ù¼Ò °³¼±µÊ
+mean(testdata$V5==predict(g_constraint,X_test)) #ì„±ëŠ¥ì´ ë‹¤ì†Œ ê°œì„ ë¨
 
-setwd("C://Users//MinSu//Desktop//»ı¹°Åë°è(Áß°£¹ßÇ¥)")
-#3. splice data
+setwd("C://Users//MinSu//Desktop//ìƒë¬¼í†µê³„(ì¤‘ê°„ë°œí‘œ)")
+################################################################ 3. splice data ###########################################################
 set.seed(1234)
 
 ##step1 setting
@@ -318,7 +318,7 @@ g_constraint <- TSVM(X=X,y=y,X_u=X_u,
                      C=10,Cstar=10,balancing_constraint = TRUE,
                      x_center = FALSE,verbose=TRUE)
 ##step2 tuning(10CV)
-#X_u´Â °íÁ¤µÈÃ¤·Î, X¸¸ ¹Ù²ã°¡¸ç..
+#X_uëŠ” ê³ ì •ëœì±„ë¡œ, Xë§Œ ë°”ê¿”ê°€ë©°..
 
 tuningnum=sample(1:20,20)
 traindata_l_cv=traindata_l[tuningnum,]
@@ -392,7 +392,7 @@ for(j in 1:6){
   cc=lis[j]
   lis2[j]=flower1(cc)
 }
-lis2 #cost 0.001 Ã¤ÅÃ
+lis2 #cost 0.001 ì±„íƒ
 
 l=list(lis=lis,lis=lis)
 m=do.call(expand.grid,l)
@@ -404,7 +404,7 @@ for (i in 1:36) {
   }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
 }
 m
-#cost 1, 0.001 Ã¤ÅÃ
+#cost 1, 0.001 ì±„íƒ
 
 
 
@@ -422,7 +422,7 @@ mean(testdata$V1==predict(g_sup,X_test)) #0.6733333
 mean(testdata$V1==predict(g_constraint,X_test)) #0.6733333
 
 
-#4.
+##################################################### 4.balance scale ##############################################################
 
 set.seed(1234)
 
@@ -462,7 +462,7 @@ g_constraint <- TSVM(X=X,y=y,X_u=X_u,
                      C=10,Cstar=10,balancing_constraint = TRUE,
                      x_center = FALSE,verbose=TRUE)
 ##step2 tuning(10CV)
-#X_u´Â °íÁ¤µÈÃ¤·Î, X¸¸ ¹Ù²ã°¡¸ç..
+#X_uëŠ” ê³ ì •ëœì±„ë¡œ, Xë§Œ ë°”ê¿”ê°€ë©°..
 
 tuningnum=sample(1:50,50)
 traindata_l_cv=traindata_l[tuningnum,]
@@ -536,7 +536,7 @@ for(j in 1:6){
   cc=lis[j]
   lis2[j]=flower1(cc)
 }
-lis2 #cost 0.01 Ã¤ÅÃ
+lis2 #cost 0.01 ì±„íƒ
 
 l=list(lis=lis,lis=lis)
 m=do.call(expand.grid,l)
@@ -548,7 +548,7 @@ for (i in 1:36) {
   }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})
 }
 m
-#cost 0.01, 0.01 Ã¤ÅÃ
+#cost 0.01, 0.01 ì±„íƒ
 
 
 
