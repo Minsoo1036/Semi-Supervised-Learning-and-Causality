@@ -4,7 +4,7 @@
 The performance of semi-supervised learning compared to just supervised learning can be predicted by causality.
 For instance, when the outcome is the result of the predictors in the sense of causality, the information obtained by more data that have predictors without outcome doesn't help the supervised model's prediction [1].
 
-Experiments are implemented on four different datasets (mushroom data / iris data / splice data / balance scale data) and use SVM for supervised learning, TSVM for semi-supervised learning
+Experiments are implemented on four different UCI datasets (mushroom data / iris data / splice data / balance scale data) and use SVM for supervised learning, TSVM for semi-supervised learning
 
 [1] Jonas Peters, Dominik Janzing, and Bernhard Sholkopf. *Elements of causal inference: foundations and learning algorithms.* 2017.
 
