@@ -10,7 +10,7 @@ Experiments are implemented on four different UCI datasets (mushroom data / iris
 
 ==========================================================
 
-**Experiment Results**
+**Experiment Results (Accuracy)**
 
 |Dataset|SVM|TSVM|Causal/Anticausal|
 |-----|----|----|------|
